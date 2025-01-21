@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>firebase Class EX </title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-app.min.js"></script>
+<!--TODO: Add SDKs for Firebase products that you want to use. https://cdnout.com/cdn/firebase@8.2.2-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-analytics.min.js"></script>
+<!--**** Remember to add the database script ***-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-database.min.js"></script>
+<!--Your web app's Firebase configuration-->
+<script src="config.js"></script>
+<script src="./script.js"></script>
+
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Rock Paper Scissors Multiplayer 🎮</h1>
+        <div id="playerInfo">
+            <input type="text" id="playerName" placeholder="Enter your name">
+            <button id="joinGame">Join Game 🎯</button>
+        </div>
+        
+        <div id="gameRoom" style="display: none;">
+            <h2>Game Room 🎲</h2>
+            <div id="waitingMessage">Waiting for another player... ⌛</div>
+            <div id="players" class="players-list"></div>
+            <div id="choices" style="display: none;">
+                <button class="choice" data-choice="rock">🪨</button>
+                <button class="choice" data-choice="paper">📄</button>
+                <button class="choice" data-choice="scissors">✂️</button>
+            </div>
+            <div id="result" class="result-text"></div>
+        </div>
+    </div>
+</body>
+</html>
